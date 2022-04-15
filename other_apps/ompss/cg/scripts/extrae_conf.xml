@@ -1,0 +1,56 @@
+<?xml version='1.0'?>
+
+<trace enabled="yes"
+ home="/apps/CEPBATOOLS/extrae/3.1.0/default/64"
+ initial-mode="detail"
+ type="paraver"
+ xml-parser-id="Id: xml-parse.c 2014 2013-07-30 08:13:03Z harald $"
+>
+
+  <openmp enabled="no" />
+
+  <pthread enabled="no" />
+
+  <callers enabled="no" />
+
+  <user-functions enabled="no" />
+
+  <counters enabled="no" />
+
+  <storage enabled="yes">
+    <trace-prefix enabled="no">TRACE</trace-prefix>
+    <temporal-directory enabled="no">/tmp</temporal-directory>
+    <final-directory enabled="yes">$PWD$</final-directory>
+  </storage>
+
+  <buffer enabled="yes">
+    <size enabled="yes">500000</size>
+    <circular enabled="no" />
+  </buffer>
+
+  <trace-control enabled="no" />
+
+  <others enabled="no" />
+
+  <bursts enabled="no" />
+
+  <cell enabled="no" />
+
+  <sampling enabled="no" />
+
+  <dynamic-memory enabled="no" />
+
+  <input-output enabled="no" />
+
+  <merge enabled="yes"
+    synchronization="default"
+    tree-fan-out="16"
+    max-memory="512"
+    joint-states="yes"
+    keep-mpits="no"
+    sort-addresses="yes"
+    overwrite="yes">
+	cg_trace.prv
+  </merge>
+
+</trace>

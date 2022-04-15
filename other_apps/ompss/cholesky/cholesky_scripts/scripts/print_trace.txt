@@ -1,0 +1,172 @@
+NANOS++: (WD's) Resuming task 1 in thread 0
+NANOS++: (WD-ID) Entering 1 Work Descriptor
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 2 named nanos_wg_wait_completion()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Suspending task 1 in thread 0
+NANOS++: (WD's) Resuming task 2 in thread 0
+NANOS++: (WD-ID) Entering 2 Work Descriptor
+NANOS++: (USER-CODE) Entering 2 User Code Function
+NANOS++: (USER-CODE) Exiting 2 User Code Function
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Finishing task 2 in thread 0
+NANOS++: (WD's) Resuming task 3 in thread 0
+NANOS++: (WD-ID) Entering 3 Work Descriptor
+NANOS++: (USER-CODE) Entering 3 User Code Function
+NANOS++: (USER-CODE) Exiting 3 User Code Function
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Finishing task 3 in thread 0
+NANOS++: (WD's) Resuming task 4 in thread 0
+NANOS++: (WD-ID) Entering 4 Work Descriptor
+NANOS++: (USER-CODE) Entering 4 User Code Function
+NANOS++: (USER-CODE) Exiting 4 User Code Function
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Finishing task 4 in thread 0
+NANOS++: (WD's) Resuming task 5 in thread 0
+NANOS++: (WD-ID) Entering 5 Work Descriptor
+NANOS++: (USER-CODE) Entering 5 User Code Function
+NANOS++: (USER-CODE) Exiting 5 User Code Function
+NANOS++: (WD's) Finishing task 5 in thread 0
+NANOS++: (WD's) Resuming task 1 in thread 0
+NANOS++: (API) Exiting 2 named nanos_wg_wait_completion()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 2 named nanos_wg_wait_completion()
+NANOS++: (WD's) Suspending task 1 in thread 0
+NANOS++: (WD's) Resuming task 6 in thread 0
+NANOS++: (WD-ID) Entering 6 Work Descriptor
+NANOS++: (USER-CODE) Entering 6 User Code Function
+NANOS++: (USER-CODE) Exiting 6 User Code Function
+NANOS++: (WD's) Finishing task 6 in thread 0
+NANOS++: (WD's) Resuming task 7 in thread 0
+NANOS++: (WD-ID) Entering 7 Work Descriptor
+NANOS++: (USER-CODE) Entering 7 User Code Function
+NANOS++: (USER-CODE) Exiting 7 User Code Function
+NANOS++: (WD's) Finishing task 7 in thread 0
+NANOS++: (WD's) Resuming task 8 in thread 0
+NANOS++: (WD-ID) Entering 8 Work Descriptor
+NANOS++: (USER-CODE) Entering 8 User Code Function
+NANOS++: (USER-CODE) Exiting 8 User Code Function
+NANOS++: (WD's) Finishing task 8 in thread 0
+NANOS++: (WD's) Resuming task 9 in thread 0
+NANOS++: (WD-ID) Entering 9 Work Descriptor
+NANOS++: (USER-CODE) Entering 9 User Code Function
+NANOS++: (USER-CODE) Exiting 9 User Code Function
+NANOS++: (WD's) Finishing task 9 in thread 0
+NANOS++: (WD's) Resuming task 1 in thread 0
+NANOS++: (API) Exiting 2 named nanos_wg_wait_completion()
+NANOS++: (API) Entering 2 named nanos_wg_wait_completion()
+NANOS++: (API) Exiting 2 named nanos_wg_wait_completion()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 17 named nanos_create_xxx_wd()
+NANOS++: (API) Exiting 17 named nanos_create_xxx_wd()
+NANOS++: (API) Entering 45 named nanos_set_translate_function()
+NANOS++: (API) Exiting 45 named nanos_set_translate_function()
+NANOS++: (API) Entering 18 named nanos_submit()
+NANOS++: (API) Exiting 18 named nanos_submit()
+NANOS++: (API) Entering 2 named nanos_wg_wait_completion()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Suspending task 1 in thread 0
+NANOS++: (WD's) Resuming task 10 in thread 0
+NANOS++: (WD-ID) Entering 10 Work Descriptor
+NANOS++: (USER-CODE) Entering 10 User Code Function
+NANOS++: (USER-CODE) Exiting 10 User Code Function
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Finishing task 10 in thread 0
+NANOS++: (WD's) Resuming task 11 in thread 0
+NANOS++: (WD-ID) Entering 11 Work Descriptor
+NANOS++: (USER-CODE) Entering 11 User Code Function
+NANOS++: (USER-CODE) Exiting 11 User Code Function
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Finishing task 11 in thread 0
+NANOS++: (WD's) Resuming task 12 in thread 0
+NANOS++: (WD-ID) Entering 12 Work Descriptor
+NANOS++: (USER-CODE) Entering 12 User Code Function
+NANOS++: (USER-CODE) Exiting 12 User Code Function
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (API) Entering 27 named nanos_get_addr()
+NANOS++: (API) Exiting 27 named nanos_get_addr()
+NANOS++: (WD's) Finishing task 12 in thread 0
+NANOS++: (WD's) Resuming task 13 in thread 0
+NANOS++: (WD-ID) Entering 13 Work Descriptor
+NANOS++: (USER-CODE) Entering 13 User Code Function
+NANOS++: (USER-CODE) Exiting 13 User Code Function
+NANOS++: (WD's) Finishing task 13 in thread 0
+NANOS++: (WD's) Resuming task 1 in thread 0
+NANOS++: (API) Exiting 2 named nanos_wg_wait_completion()

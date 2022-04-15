@@ -1,0 +1,54 @@
+\section*{}
+\label{cg_luc_ompss}
+\centering
+\Huge
+\textbf{CG Luc Ompss}
+
+\begin{table}[h!]
+  \large
+  \centering
+  \begin{tabular}{|l|p{8cm}|}
+    \hline
+    Programming model                & OmpSs \\
+    Dependences                      & Incomplete data dependences (data-flow without shared read-only data, see README) \\
+    Synchronization                  & Data-flow dependences, Reductions \\
+    Special OmpSs annotations        & Multidependencies, Concurrent, Wait on, Task reductions \\
+    Additional features              & Overlapping of task execution and creation \\
+    OpenMP implementation available? & No \\
+    References input sets            & Matrix-dependent (See README for matrices). 4 parameters are important: the number of rows ($n$), non-zeroes ($nnz$), iterations ($it$) and blocks ($b$, usually equal to number of threads).
+    Total size is $60 n + 12 nnz$ bytes, 8 different task types, $it \times (2 + 6 b)$ total tasks. Task complexity (total per task type per iteration) in number of floating point operations is: negligible (2 task types), $O(n)$ (5 task types), $O(nnz)$ (1 task type). Every 50 iterations, two supplementary task types are used (complexity $O(nnz)$ and $O(n)$ respectively, $b$ blocks per task type). \\
+    Scalability                      & Matrix-dependent \\
+    Additional notes                 & Due to task execution/creation overlapping, enabling require nanos newer than 16.06 release: version at least Jul 05, 2016 (commit 7680b4c). A fallback reduction is available using atomic concurrent accesses. This is the same code as the MPI+OmpSs CG, with mpi support disabled. \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+
+\section*{}
+\label{cg_luc_mpi_ompss}
+\centering
+\Huge
+\textbf{CG Luc MPI+Ompss}
+
+\begin{table}[h!]
+  \large
+  \centering
+  \begin{tabular}{|l|p{8cm}|}
+    \hline
+    Programming model                & MPI + OmpSs \\
+    Dependences                      & Incomplete data dependences (data-flow without shared read-only data, see README) \\
+    Synchronization                  & Data-flow dependences, Reductions \\
+    Special OmpSs annotations        & Multidependencies, Concurrent, Wait on, Task reductions \\
+    Additional features              & Overlapping of task execution and creation, Overlapping of task execution and MPI communication \\
+    OpenMP implementation available? & No \\
+    References input sets            & See reference CG. Additional tasks to perform MPI communications (1 per iteration, 1 every 50 iterations, both without computations). Size per rank is $(36 n + 12 nnz) / m + 24n$ with $m$ MPI ranks. \\
+    Scalability                      & 80.17\% parallel efficiency (strong scaling) with matrix `-synth Poisson3D 27 512` on 128 sockets (1024 cores), with baseline 8 sockets (64 cores, smallest amount to fit the matrix in memory),
+   running on Marenostrum (Intel Xeon E5-2670) [Jaulmes et al., SC15]. \\
+    Additional notes                 & Due to task execution/creation overlapping, enabling require nanos newer than 16.06 release: version at least Jul 05, 2016 (commit 7680b4c). A fallback reduction is available using atomic concurrent accesses. This is the same code as the reference CG, with mpi support enabled. \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage
+

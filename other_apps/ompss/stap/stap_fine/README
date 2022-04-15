@@ -1,0 +1,16 @@
+
+-------------------------------------------------
+Space-time adaptive Processing radar application
+-------------------------------------------------
+
+CONTENT of this application distribution
+
+	RadarBenchV1-1.doc 	-- description of the main blocks of the algorithm
+	InputStimuli.txt 	-- input test data needed for running the benchmark (do not remove)
+	stap_bench_trans.c 	-- source file in C
+
+------------------------------------------------
+
+
+T. Petrisor (claudia-teodora.petrisor@thalesgroup.com)
+15/01/2010

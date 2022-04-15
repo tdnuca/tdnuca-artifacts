@@ -1,0 +1,19 @@
+MEMKIND_INSTALL=/home/Computational/lalvarez/KNL_javi/ompss/memkind
+MEMKIND_FLAGS=-L$(MEMKIND_INSTALL)/lib -lmemkind -I$(MEMKIND_INSTALL)/include -Wl,-rpath,$(MEMKIND_INSTALL)/lib
+
+all: prk2_stencil.verif prk2_stencil.instr prk2_stencil.perf
+
+clean:
+	rm -f stencil_kernel.o prk2_stencil.verif prk2_stencil.instr prk2_stencil.perf
+
+stencil_kernel.o: src/stencil_kernel.c src/stencil_kernel.h
+	icc -O3 -restrict -strict-ansi -c -o stencil_kernel.o src/stencil_kernel.c -xMIC-AVX512 -qopt-streaming-stores always
+
+prk2_stencil.perf: src/intel_prk2_stencil.c src/stencil_kernel.h stencil_kernel.o
+	imcc --Wn,-restrict,-strict-ansi -k --ompss src/intel_prk2_stencil.c -o prk2_stencil.perf -O3 stencil_kernel.o $(MEMKIND_FLAGS)
+
+prk2_stencil.verif: src/intel_prk2_stencil.c src/stencil_kernel.h stencil_kernel.o
+	imcc --Wn,-restrict,-strict-ansi --ompss src/intel_prk2_stencil.c -o prk2_stencil.verif --debug -O3 -DVALIDATE stencil_kernel.o -k -O0 -g $(MEMKIND_FLAGS)
+
+prk2_stencil.instr: src/intel_prk2_stencil.c src/stencil_kernel.h stencil_kernel.o
+	imcc --Wn,-restrict,-strict-ansi --ompss src/intel_prk2_stencil.c -o prk2_stencil.instr --instrument -O3 stencil_kernel.o $(MEMKIND_FLAGS)

@@ -1,0 +1,25 @@
+\section*{}
+\label{qr_tile}
+\centering
+\Huge
+\textbf{Tiled QR factorization}
+
+\begin{table}[h!]
+  \large
+  \centering
+  \begin{tabular}{|l|l|}
+    \hline
+    Programming model                & OmpSs (C++) \\
+    Dependences                      & Data-flow dependences \\
+    Synchronization                  & Data-flow dependences \\
+    Special OmpSs annotations        & --- \\
+    Additional features              & Overlapping of task execution and creation / Taskified data initialization / Can output Q and R matrices \\
+    OpenMP implementation available? & No; easily translatable \\
+    References input sets            & Matrix dimensions (random matrix) or file input \\
+    Scalability                      & ? \\
+    Additional information           & See \url{http://dx.doi.org/10.1002/cpe.1301} and \url{http://dx.doi.org/10.1016/j.parco.2008.10.002} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\newpage

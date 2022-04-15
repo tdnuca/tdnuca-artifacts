@@ -1,0 +1,23 @@
+\section*{}
+\label{template}
+\centering
+\Huge
+\textbf{Template for Benchmarks}
+
+\begin{table}[h!]
+  \large
+  \centering
+  \begin{tabular}{|l|l|}
+    \hline
+    Programming model                & Ompss / OpenMP4 / MIP+OmpSs / MPI+OpenMP4 \\
+    Dependences                      & No dependences / Sentinels / Incomplete data dependences* / Data-flow dependences \\
+    Synchronization                  & Barriers / Data-flow dependences / Reductions / Atomics / Critical sections / Locks \\
+    Special OmpSs annotations        & Multidependences / Concurrent / Commutative / Wait on \\
+    Additional features              & Nested tasks / Overlapping of task execution and creation / Taskified data initialization \\
+    OpenMP implementation available? & Yes and working / Yes but not working / No \\
+    References input sets            & Whatever you can tell about input sets you are using: \# of instructions, \# of tasks, data set size... \\
+    Scalability                      & 4x with 4 cores on Marenostrum \\
+    \hline
+  \end{tabular}
+\end{table}
+

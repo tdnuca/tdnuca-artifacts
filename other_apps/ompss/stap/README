@@ -1,0 +1,9 @@
+STAP
+
+Description
+-----------
+This Space-Time Adaptive Processing (STAP) application is a simplified view of an MTI (Moving Target Indication) application, whose goal is to receive the echo from the ground of a periodic sequence of radar pulses, and to detect the objects that are moving on the ground among all the other generally still reflecting surfaces under the radar beam (ground clutter). Basically, radar processing permits to estimate both the position of a target through the delay between transmission of a signal (pulse) and reception of its echo, and its speed through the Doppler effect that affects echoes of several identical pulses sent periodically: the speed of the target results in a (small) variation of its distance from the radar, which is only visible as a phase shift on the radar signal (e.g., around 10 GHz). In this basic approach, Doppler processing consists in a bank of filters (e.g., a Fast Fourier Transform) each one tuned towards a particular phase shift between successive echoes. This application is written in C. 
+
+Observations
+------------
+There are two versions in this package. One employs coarse grain tasks, an another fine-grain tasks.

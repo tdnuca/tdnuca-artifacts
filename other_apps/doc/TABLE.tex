@@ -1,0 +1,240 @@
+\documentclass[landscape]{article}
+
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{arydshln}
+\usepackage{shortvrb}
+\usepackage{needspace}
+\usepackage{minibox}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[letterpaper, landscape, margin=.2in]{geometry}
+
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cm}{\ding{51}}%checkmark
+\newcommand{\xm}{\ding{55}}%xmark
+\newcommand{\mm}{$\approx$}%mid relevance
+\newcommand{\lm}{$\sim$}%low relevance
+
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
+
+\hypersetup{
+  colorlinks = true,
+  linkcolor = black,
+  urlcolor = black,
+  citecolor = black,
+}
+
+\begin{document}
+
+\begin{table}[h!]
+%   \centering
+  \ra{1.2}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{@{}llccllcc@{}}\toprule
+      \textbf{Application} &
+      \textbf{Author} &
+      \textbf{PM} &
+      \textbf{Dwarfs} &
+      \textbf{Short Description} &
+      \textbf{Coming from} &
+      \textbf{Working?} &
+      \textbf{+Info} \\ % end of header
+      \midrule
+      {alya\_dario                 } & Dario de la Fuente & OmpSs + MPI (FORTRAN) & ?  & Alya                                       & BSC CASE                         & \cm & \hyperref[alya_dario]{link}\\
+      {bt-mz\_dimitrios            } & Dimitrios Chasapis & OmpSs + MPI (FORTRAN) & ?  & BT Multizone                               & NAS                              & \xm & \hyperref[bt-mz_dimitrios]{link}\\
+      {cg\_luc\_ompss              } & Luc Jaulmes        & OmpSs                 & 6  & Conjugate gradient                         & Implemented by Luc Jaulmes       & \xm & \hyperref[cg_luc_ompss]{link}\\
+      {cg\_luc\_mpi\_ompss         } & Luc Jaulmes        & OmpSs + MPI           & 6  & Conjugate gradient                         & Implemented by Luc Jaulmes       & \xm & \hyperref[cg_luc_mpi_ompss]{link}\\
+      {cholesky\_dimitrios         } & Dimitrios Chasapis & OmpSs                 & ?  & Cholesky factorization                     & Implemented by Guillermo Miranda & \xm & \hyperref[cholesky_dimitrios]{link}\\
+      {fft                         } & Luc Jaulmes        & OmpSs                 & 4  & Fast Fourier Transform (Cooley-Tukey and Stockham) & Ported to OmpSs by Luc Jaulmes & \cm & \hyperref[fft]{link}\\
+      {heat                        } & Isaac S\'anchez    & OmpSs                 & 4  & Heat difusion (Gauss-Seidel, Red-Black and Jacobi) & Implemented by Isaac S\'anchez & \cm & \hyperref[heat_cxx_isaac]{link}\\
+      {hydro\_dimitrios            } & Dimitrios Chasapis & OmpSs + MPI           & ?  & Hydro                                      & Implemented by Marc Casas        & \xm & \hyperref[hydro_dimitrios]{link}\\
+      {inthist                     } & Isaac Sanchez      & OmpSs                 & 4  & Histogram                                  & BAR (modified)                   & \xm & \hyperref[inthist]{link}\\
+      {kmeans\_vladimir            } & Vladimir Dimic     & OmpSs                 & ?  & Kmeans                                     & hpc-apps                         & \xm & \hyperref[kmeans_vladimir]{link}\\
+      {knn\_vladimir               } & Vladimir Dimic     & OmpSs                 & ?  & K-nearest neighbours                       & hpc-apps                         & \xm & \hyperref[knn_vladimir]{link}\\
+      {jacobi\_vladimir            } & Vladimir Dimic     & OmpSs                 & ?  & Jacobi                                     & hca-apps                         & \xm & \hyperref[jacobi_vladimir]{link}\\
+      {matmlu\_vladimir            } & Vladimir Dimic     & OmpSs                 & ?  & Matrix multiplication                      & hca-apps                         & \xm & \hyperref[matmul_vladimir]{link}\\
+    {md5\_vladimir               } & Vladimir Dimic     & OmpSs                 & ?  & Md5                                        & hca-apps                         & \xm & \hyperref[md5_vladimir]{link}\\
+    {miniamr                       } & Isaac S\'anchez    & OmpSs                 & 4  & advanced mesh refinement proxy app         & Mantevo (OmpSs by Isaac)         & \cm & \hyperref[miniamr:ompss]{link}\\
+      {qr\_tile                    } & Isaac S\'anchez    & OmpSs                 & 5  & QR                                         & Implemented by Isaac S\'anchez   & \cm & \hyperref[qr_tile]{link}\\
+      {raytrace\_vladimir          } & Vladimir Dimic     & OmpSs                 & ?  & Ray Tracing                                & hca-apps                         & \xm & \hyperref[raytrace_vladimir]{link}\\
+      {rgbuyv\_vladimir            } & Vladimir Dimic     & OmpSs                 & ?  & RGBUYV                                     & hca-apps                         & \xm & \hyperref[rgbuyv_vladimir]{link}\\
+      {sparseLU\_vladimir          } & Vladimir Dimic     & OmpSs                 & ?  & Sparse Lu                                  & hca-apps                         & \xm & \hyperref[sparselu_vladimir]{link}\\
+      {specfem3D\_dimitrios        } & Dimitrios Chasapis & OmpSs + MPI (FORTRAN) & ?  & Specfem 3D                                 & BAR                              & \xm & \hyperref[specfem3D_dimitrios]{link}\\
+      {specfem3D\_vladimir         } & Vladimir Dimic     & OmpSs                 & ?  & Specfem 3D                                 & hca-apps                         & \xm & \hyperref[specfem3D_vladimir]{link}\\
+      {specfem3D\_cgomez           } & Constan Gomez      & OmpSs + MPI (C)       & ?  & Specfem 3D                                 & hca-apps                         & \xm & \hyperref[specfem3D_cgomez]{link}\\
+      {stap\_vladimir              } & Vladimir Dimic     & OmpSs                 & ?  & Stap                                       & hca-apps                         & \xm & \hyperref[stap_vladimir]{link}\\
+      {stream                      } & Luc Jaulmes        & OmpSs                 & ?  & Stream                                     & John D. McCalpin (StarSs by Rosa Badia) & \cm & \\
+      {tinyjpeg\_vladimir          } & Vladimir Dimic     & OmpSs                 & ?  & Tiny JPEG                                  & hca-apps                         & \xm & \hyperref[tinyjpeg_vladimir]{link}\\
+      {vector-reduction\_vladimir  } & Vladimir Dimic     & OmpSs                 & ?  & Vector Reduction                           & hca-apps                         & \xm & \hyperref[vector-reduction_vladimir]{link}\\
+      \hline
+      & & & & \textbf{Unsorted} & & & \\
+      \hline
+      {ifcg                  } & Sicong Zhuang      & OmpSs                 & 6  & Conjugate gradient                         & ?                                & \xm & \\
+      {cholesky                    } & Lluc Alvarez       & OmpSs                 & ?  & Cholesky factorization                     & ?                                & \xm & \\
+      {ep                          } & Lluc Alvarez       & OmpSs                 & 13 & Embarrassingly parallel                    & NAS                              & \xm & \\
+      {jacobi                      } & Lluc Alvarez       & OmpSs                 & ?  & Jacobi                                     & MontBlanc apps?                  & \xm & \\
+      {kmeans                      } & Lluc Alvarez       & OmpSs                 & ?  & Clustering                                 & ?                                & \xm & \\
+      {matmul                      } & Lluc Alvarez       & OmpSs                 & 6? & Matrix multiplication                      & ?                                & \xm & \\
+      {prk2\_stencil               } & Lluc Alvarez       & OmpSs                 & ?  & Stencil                                    & Intel PRK2 benchmarks            & \xm & \\
+      {ptrans                      } & Lluc Alvarez       & OmpSs                 & ?  & Matrix transpose?                          & ?                                & \xm & \\
+      {sparseLU                    } & Lluc Alvarez       & OmpSs                 & ?  & Sparse                                     & ?                                & \xm & \\
+      {symMatInv                   } & Lluc Alvarez       & OmpSs                 & ?  & Symmetric matrix inversion                 & MontBlanc apps?                  & \xm & \\
+      {MD                          } & Luc Jaulmes        & OmpSs                 & 9  & Lennard-Jones potential Molecular Dynamics & Luc Jaulmes, LLNL/ExMatEx summer school & \xm & \hyperref[MD]{link}\\
+
+      {HYDRO\_cesar                } & Cesar Allande      & OmpSs + MPI           & ?  & HYDRO miniapp                                                   & ?                        & \cm & \hyperref[hydro_cesar]{link} \\
+      {NAS BT\_cesar               } & Cesar Allande      & OmpSs + MPI (FORTRAN) & ?  & Block Tridiagonal                                               & BAR                      & \cm & \hyperref[nas_bt-mz_cesar]{link} \\
+      {NAS SP\_thomas              } & Thomas Grass       & OmpSs + MPI (FORTRAN) & ?  & Scalar Penta-diagonal solver                                    & Adapted by Thomas Grass  & \cm & \hyperref[nas_sp-mz_cesar]{link}\\
+      {NAS LU\_thomas              } & Thomas Grass       & OmpSs + MPI (FORTRAN) & ?  & Lower-Upper symmetric Gauss Seidel                              & Adapted by Thomas Grass  & \cm & \hyperref[nas_lu-mz_cesar]{link} \\
+      {LULESH-mpi\_cesar           } & Cesar Allande      & OpenMP + MPI          & ?  & Livermore Unstructured Lagrangian Explicit Shock Hydrodynamics  & CORAL-benchmarks         & \cm & \hyperref[lulesh_mpi_cesar]{link} \\
+
+
+      \hline
+      {template                    } & Lluc Alvarez       & OmpSs                 & ?  & Template for benchmarks table              &                                  & \xm & \hyperref[template]{link}\\
+    \bottomrule
+  \end{tabular}
+
+
+
+
+  }
+\caption{List of applications.}
+\label{tab:applications}
+\end{table}
+
+%\newpage
+%
+%\begin{table}
+%%   \centering
+%  \ra{1.2}
+%  \resizebox{\textwidth}{!}{
+%  \begin{tabular}{@{}llcccccccc@{}}\toprule
+%      \textbf{Application} &
+%      \textbf{Author} &
+%      \textbf{PM} &
+%      \textbf{Full dependences} &
+%      \textbf{Sentinels} &
+%      \textbf{No dependences} &
+%      \textbf{Nesting} &
+%      \textbf{Concurrent} &
+%      \textbf{Input sizes} &
+%      \textbf{Scalability} \\ % end of header
+%      \midrule
+%      {ifcg           } & Sicong Zhuang & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {cgluc          } & Luc Jaulmes   & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {kmeans         } & Isaac Sanchez & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {inthist        } & Isaac Sanchez & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {heat           } & Lluc Alvarez  & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {jacobi         } & Lluc Alvarez  & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {qr-tile        } & Lluc Alvarez  & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {symMatInv      } & Lluc Alvarez  & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {ep             } & Javi Bueno    & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {matmul         } & Javi Bueno    & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {cholesky       } & Javi Bueno    & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {prk2\_stencil  } & Javi Bueno    & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {ptrans         } & Javi Bueno    & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {sparseLU       } & Javi Bueno    & OmpSs      & ?   & ?   & ?   & ?   & ?   & ?                                 & ? \\
+%      {stream         } & Javi Bueno    & OmpSs      & \cm & \xm & \xm & \xm & \xm & Configurable (up to 60 GB tested) & - \\
+%    \bottomrule
+%  \end{tabular}
+%  }
+%\caption{Application characteristics.}
+%\label{tab:application_characteristics}
+%\end{table}
+
+\newpage
+
+\begin{table}[h!]
+%   \centering
+  \ra{1.2}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{@{}lccccccccccccm{12cm}m{4cm}@{}}\toprule
+      \textbf{Dwarf Name} &
+      \rotatebox[origin=l]{90}{\textbf{Embed}} &
+      \rotatebox[origin=l]{90}{\textbf{SPEC}} &
+      \rotatebox[origin=l]{90}{\textbf{DB}} &
+      \rotatebox[origin=l]{90}{\textbf{Games}} &
+      \rotatebox[origin=l]{90}{\textbf{ML}} &
+      \rotatebox[origin=l]{90}{\textbf{CAD}} &
+      \rotatebox[origin=l]{90}{\textbf{HPC}} &
+      \rotatebox[origin=l]{90}{\textbf{Health}} &
+      \rotatebox[origin=l]{90}{\textbf{Image}} &
+      \rotatebox[origin=l]{90}{\textbf{Speech}} &
+      \rotatebox[origin=l]{90}{\textbf{Music}} &
+      \rotatebox[origin=l]{90}{\textbf{Browser}} &
+      \textbf{Description} &
+      \textbf{Application} \\ % end of header
+      \midrule
+      1. Finite State Mach       &\cm&\cm&\cm&\mm&\mm&\mm&\xm&\xm&\xm&\xm&\xm&\cm& A system whose behavior is defined by states. & Temporal data mining \\
+      2. Combinational logic     &\cm&\xm&\lm&\xm&\lm&\xm&\xm&\xm&\xm&\xm&\xm&\cm& Functions that are implemented with logical functions and stored state. & CRC, encryption \\
+      3. Graph Algorithms        &\cm&\mm&\mm&\mm&\cm&\cm&\xm&\cm&\xm&\cm&\lm&\lm& Visits many nodes in a graph by following successive edges. These applications typically involve many levels of indirection, and a relatively small amount of computation. & BFS, Bitonic sort, quicksort \\
+      4. Structured Grids        &\cm&\cm&\xm&\mm&\xm&\xm&\cm&\xm&\cm&\xm&\xm&\xm& Represented by a regular grid; points on grid are conceptually updated together. It has high spatial locality. Updates may be in place or between 2 versions of the grid. The grid may be subdivided into finer grids in areas of interest (“Adaptive Mesh Refinement”). & SRAD, Cactus or latticeBoltzmann magnetohydrodynamics, Multi-Grid, Scalar Pentadiagonal \\
+      5. Dense linear            &\cm&\cm&\mm&\cm&\cm&\cm&\cm&\xm&\cm&\cm&\cm&\xm& Dense matrices or vectors. (BLAS Level 1 = vector-vector; Level 2 = matrix-vector; and Level 3 = matrix-matrix.) Use unit-stride memory accesses to read data from rows, and strided accesses to read data from columns. & Block Triadiagonal Matrix, Lower Upper Symmetric Gauss-Seidel, LU Decomposition, BLAS or MATLAB \\
+      6. Sparse linear           &\mm&\mm&\xm&\cm&\cm&\cm&\cm&\cm&\xm&\xm&\cm&\xm& Data sets include many zero values. Data is usually stored in compressed matrices to reduce the storage and bandwidth requirements to access all of the nonzero values. Because of the compressed formats, data is generally accessed with indexed loads and stores. & CG, Matrix multiplication, SpMV, OSKI, or SuperLU \\
+      7. Spectral methods        &\mm&\xm&\xm&\mm&\mm&\mm&\cm&\xm&\lm&\cm&\cm&\cm& Data are in the frequency domain, as opposed to time or spatial domains. Use multiple butterfly stages, which combine multiply-add operations and a specific pattern of data permutation, with all-to-all communication for some stages and strictly local for others. & FFT \\
+      8. Dynamic prog            &\mm&\xm&\cm&\xm&\cm&\cm&\xm&\xm&\xm&\mm&\xm&\cm& Computes a solution by solving simpler overlapping subproblems. Particularly useful in optimization problems with a large set of feasible solutions. & Needleman-Wunsch \\
+      9. N-body methods          &\xm&\mm&\xm&\mm&\xm&\xm&\cm&\xm&\xm&\xm&\xm&\xm& Depends on interactions between many discrete points. Variations include particle-particle methods, where every point depends on all others, leading to an O(N2) calculation, and hierarchical particle methods, which combine forces or potentials from multiple points to reduce the computational complexity to O(N log N) or O(N). & GEM, RRU(LANL), Barnes-Hut, Fast Multipole Method \\
+      10. Backtrack/B\&B         &\xm&\xm&\mm&\xm&\cm&\cm&\xm&\xm&\xm&\xm&\mm&\xm& Finds an optimal solution by recursively dividing the feasible region into subdomains, and then pruning subproblems that are suboptimal. & N-Queens, Travelling salesman \\
+      11. Graphical Models       &\xm&\xm&\mm&\xm&\cm&\xm&\xm&\xm&\xm&\xm&\cm&\xm& Constructs graphs that represent random variables as nodes and conditional dependencies as edges. & NVIDIA HMM, Bayesian networks and Hidden Markov Models. \\
+      12. Unstructured Grids     &\xm&\xm&\xm&\mm&\mm&\mm&\cm&\cm&\xm&\xm&\cm&\xm& An irregular grid where data point locations and connectivity of neighboring points must be explicit. The points on the grid are conceptually updated together. Updates typically involve multiple levels of memory reference indirection. & Unstructured Adaptive, CFD Solver, ABAQUS or FIDAP \\
+      13. MapReduce              &\xm&\xm&\cm&\xm&\cm&\xm&\cm&\xm&\xm&\xm&\xm&\xm& Calculations depend on statistical results of repeated random trials. Considered embarrassingly parallel & Embarrassingly Parallel, PSICL-BLAST, Monte Carlo \\
+    \bottomrule
+  \end{tabular}
+  }
+\caption{The 13 dwarfs: description and application types}
+{\footnotesize\centering
+ Legend:
+ {\bf \cm} Very relevant\quad\quad\quad
+ {\bf \mm} Quite relevant\quad\quad\quad
+ {\bf \lm} Somewhat relevant\quad\quad\quad
+ {\bf \xm} Not relevant
+}
+\label{tab:dwarfs}
+\end{table}
+
+\vspace{15cm}
+
+\input{alya_dario.tex}
+\input{bt-mz_dimitrios.tex}
+\input{cg_luc.tex}
+\input{cholesky_dimitrios.tex}
+\input{fft.tex}
+\input{heat_cxx_isaac.tex}
+\input{hydro_dimitrios.tex}
+\input{inthist.tex}
+\input{kmeans_vladimir.tex}
+\input{knn_vladimir.tex}
+\input{jacobi_vladimir.tex}
+\input{matmul_vladimir.tex}
+\input{md5_vladimir.tex}
+\input{miniamr.tex}
+\input{qr_tile.tex}
+\input{raytrace_vladimir.tex}
+\input{rgbyuv_vladimir.tex}
+\input{sparselu_vladimir.tex}
+\input{specfem3D_dimitrios.tex}
+\input{specfem3D_vladimir.tex}
+\input{specfem3D_cgomez.tex}
+\input{stap_vladimir.tex}
+\input{tinyjpeg_vladimir.tex}
+\input{vector-reduction_vladimir.tex}
+\input{ifcg.tex}
+\input{hydro_cesar.tex}
+\input{nas_bt-mz_cesar.tex}
+\input{nas_sp-mz_cesar.tex}
+\input{nas_lu-mz_cesar.tex}
+\input{lulesh_mpi_cesar.tex}
+
+\input{MD.tex}
+
+
+
+\input{template.tex}
+
+
+\end{document}
+\grid
+\grid

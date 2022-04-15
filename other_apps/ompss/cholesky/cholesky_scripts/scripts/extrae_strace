@@ -1,0 +1,5 @@
+queue 0 size = 0, queue 1 size = 0
+queue 0 addr = 0x63bf18 queue 1 addr = 0x63bf58
+numSpins = 300
+Running with 1 HP cores
+hp from = 0 hp to = 0 

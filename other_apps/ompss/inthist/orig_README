@@ -1,0 +1,52 @@
+-------------------------------------------------------------------
+Integral Histogram                          
+Barcelona Application Repository (BAR) - Readme
+-------------------------------------------------------------------
+Formatted Readme for BAR TRAC support.
+1)Required tags: Name, Contact Person, Repository, Access Level, License Agreement, Platform
+2)Tags follow the syntax: 
+"[tag]: single string"
+"[tag] multiline text"
+Multiline text tags include any formatted text until next tag or EOF and
+can include any TRAC understandable formatting directives.
+---------------------------------------------------------------------
+
+[Name]: Integral Histogram (cross-weave scan)
+[Contact Person]: Pieter Bellens, pieter.bellens@bsc.es
+[Access Level]: public
+[License Agreement]: GPL
+[Platform]: CellSs, SMPSss, OMPSs 
+
+[Body]
+== Description ==
+The integral histogram computes a cumulative histogram for each pixel of an image. With this measure one 
+can find the histogram of a Cartesian region of pixels in constant time. Morphology and thresholding 
+are two examples of operations in digital image processing that repeatedly compute histograms on the same 
+input image and hence benefit from the integral histogram. This package describes the cross-weave scan. 
+
+=== Origin ===
+Written from scratch based on the description in "Integral Histogram: A Fast Way To Extract Histograms in Cartesian Spaces" 
+by Fatih Porikli (2005). 
+
+=== General Algorithm ===
+The algorithm initializes each pixel with an empty histogram. The number of bins and the size of a bin 
+are input parameters. The application computes the cumulative histogram at a pixel (i,j) in two passes over the 
+blocks of the input image. The horizontal pass processes the image blocks and propagates the histograms from (i,j) to (i,j+1) 
+The vertical pass propagates the histograms from (i,j) to (i+1,j). 
+
+=== Execution instructions ===
+./inthist imw imh bw bh bins binstride it otsuheight otsuwidth [[BR]]
+* imw       = image width in pixels
+* imh       = image height in pixels
+* bw        = width of a block in pixels
+* bh        = height of a block in pixels
+* bins      = number of bins in a histogram
+* binstride = bin width
+To check the results for correctness edit inthist_check.h and set INTHIST_CHECK to a value greater than 0. 
+The integral histogram can be compiled with OpenCV support to process images. 
+
+== Performance Results ==
+
+== References ==
+ * Fatih Murat Porikli, "Integral Histogram: A Fast Way To Extract Histograms in Cartesian Spaces", 2005
+

@@ -1,0 +1,31 @@
+GAUSS
+    SRC Location: other_apps/ompss/heat/
+    Command Line: heat-ompss 24 other_apps/ompss/heat/inputs/gauss.dat 1
+
+HISTO
+    SRC Location: other_apps/ompss/inthist/
+    Command Line: inthist_crossweave 1500 1500 50 50 50 2 1 ./output.txt
+
+JACOBI
+    SRC Location: other_apps/ompss/heat/ 
+    Command Line: heat-ompss 8 other_apps/ompss/heat/inputs/jacobi.dat 1
+
+KMEANS
+    SRC Location: hca_apps/
+    Command Line: kmeans 450000 90 6 524288 1
+
+KNN
+    SRC Location: other_apps/ompss/knn
+    Command Line: knn 512 229376 12 16 8 131072
+
+LU
+    SRC Location: other_apps/ompss/sparseLU
+    Command Line: sparseLU
+
+MD5
+    SRC Location: other_apps/ompss/md5
+    Command Line: md5 -i 7
+
+REDBLACK
+    SRC Location: other_aps/ompss/heat
+    Command Line: heat-ompss 8 other_apps/ompss/heat/inputs/redblack.dat 1

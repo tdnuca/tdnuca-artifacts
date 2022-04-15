@@ -1,0 +1,23 @@
+\section*{}
+\label{alya_dario}
+\centering
+\Huge
+\textbf{Alya Dario}
+
+\begin{table}[h!]
+  \large
+  \centering
+  \begin{tabular}{|l|l|}
+    \hline
+    Programming model                & MPI+OpenMP (but compiled with OmpSs, because Tasksim does not support OpenMP) \\
+    Dependences                      & No dependences \\
+    Synchronization                  & Barriers / Reductions / Atomics / Critical sections \\
+    Special OmpSs annotations        & No \\
+    Additional features              & None \\
+    OpenMP implementation available? & Yes and working \\
+    References input sets            & 10M elements, scales up to 1024 cores at least. Depending on number of cores, takes between 10 seconds and 2 minutes per iteration. There's also two very small tests, only useful to test if it's working at all \\
+    Scalability                      & Scales almost linearly up to 512 cores, scales well with 1024 cores too. \\
+    \hline
+  \end{tabular}
+\end{table}
+
